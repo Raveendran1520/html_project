@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Register Candidate</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+   
+    <script type="text/javascript">
+           function printvalue()
+           {  
+              name = document.form1.username.value;
+              mail = document.form1.mail.value;
+              pass = document.form1.pass.value;
+              cnfrmpass = document.form1.cnfrmpass.value;
+
+
+             if(name==null || name=="") 
+            {
+
+             alert(" Please enter username..");
+             return false;
+            }
+
+
+            if(mail==null || mail=="")
+            {
+              alert(" Please enter Email");
+              return false;
+            }
+
+
+            if(pass=="" || pass==null)
+            {
+              alert(" Please enter Password");
+              return false;
+            }
+
+
+            if(cnfrmpass==pass && cnfrmpass!=null && cnfrmpass!="")
+            {
+              return true;
+            }
+            else
+            {
+              alert(" Password doesn't match ");
+              return false;
+            }
+          }
+
+          function printvalue()
+          {
+            
+            name = document.form1.name.value;
+            mail = document.form1.mail.value;
+            pass = document.form1.pass.value;
+            cnfrmpass = document.form1.cnfrmpass.value;
+            phn = document.form1.phn.value;
+            pin = document.form1.pin.value;
+            addr = document.form1.addr.value;
+            terms = document.form1.terms.value;
+
+
+            if(pin!="" && addr!="" && name!="" && mail!="" && pass!="" && cnfrmpass!="" && phn!="")
+            {
+             alert("...REGISTRATION IS SUCCESSFULL..."+"\n.. GO BACK TO THE LOGIN PAGE..");
+             return true;
+            }
+            else
+            {
+              alert(" Please find the remaining fields..")
+              return false;
+            }
+
+            if(phn==null || phn=="")
+            {
+              alert(" Please enter the phone number");
+              return false;
+            }
+
+            if(terms!=null && terms!="")
+            {
+              alert(" Please accept terms & conditions..");
+              return false;
+            }
+          }
+
+          $(document).ready(function(){
+            $("#hide").click(function()
+            {
+              $("p").hide(1000);
+            });
+          });
+
+    </script>
+
+	<style>
+		img
+		{
+			width:625px;
+			height:580px;
+			padding:4px;
+		}
+		body
+		{
+			margin:70px 170px;
+			border:1px solid white;
+			padding:2px;
+      overflow:hidden;
+      position:fixed;
+		}
+	</style> 
+
+</head>
+<body>
+<form class="mx-1 mx-md-8" action="login.html" name="form1"  onsubmit=" return printvalue()">
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 15px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 col" style="color:red">Sign up</p>
+
+               
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    	<label class="form-label" for="form3Example1c">Username: </label>
+                      <input type="text" name="username" id="form3Example1c" class="form-control" placeholder="Jack@123" />
+                      <p><b> Username must contains: </b><br\>
+                          . Must start with a capital letters<br\>
+                          . Must contains [a-z] letters<br\>
+                          . Must contains special characters<br\>
+                          . Must contains [0-9] numeric values<br\>
+                          . It won't start with special characters or numerics<br\>
+                          . Minimum length should be 20 characters<br\></p>
+                            <button id="hide">hide</button>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    	 <label class="form-label" for="form3Example3c">Your Email: </label>
+                      <input type="email" name="mail" id="form3Example3c" class="form-control" placeholder="jack12@gmail.com" />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    	 <label class="form-label" for="form3Example4c">Password: </label>
+                      <input type="password" name="pass" id="form3Example4c" class="form-control" pattern="(?=.*[!@#$^&*])(?=.*[A-Z])(?=.*[0-9]).{6-9}"/>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                    	<label class="form-label" for="form3Example4cd">Repeat your password: </label>
+                      <input type="password" name="cnfrmpass" id="form3Example4cd" class="form-control" pattern="(?=.*[!@#$^&*])(?=.*[A-Z])(?=.*[0-9]).{6-9}" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                  <label class="mb-2 pb-1">Gender: </label>
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                      value="option1" checked />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      value="option2" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                      value="option3" />
+                    <label class="form-check-label" for="otherGender">Other</label>
+                   </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example90">Pincode : </label>
+                  <input type="text" name="pin" id="form3Example90" class="form-control form-control-lg" pattern="[0-9]{6}" />
+                </div>
+                  </div>
+
+
+                  <div class="col-md-6 mb-4 pb-2">
+                  <div data-mdb-input-init class="form-outline">
+                  	<label class="form-label" for="phoneNumber">Phone Number: </label>
+                    <input type="tel" name="phn" id="phoneNumber" class="form-control form-control-lg" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                    placeholder="123-456-789"/>                    
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-9">
+                    <label class="form-label" for="form3Example8">Address: </label>
+                    <input type="text" name="addr" id="form3Example8" class="form-control form-control-lg" />                  
+                   </div>
+                  </div>
+
+
+                  <div class="form-check d-flex justify-content-center mb-5">
+                  	<label class="form-check-label" for="form2Example3">
+                    <input class="form-check-input me-2"  name="terms" type="checkbox" value="" id="form2Example3c"/>
+                      I agree all statements in <a href="#!">Terms of service</a>
+                    </label>
+                  </div>
+                  
+                    
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"> 
+                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button>
+                    </div>
+
+               
+              </div>
+
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  class="img-fluid" alt="Sample image">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ </form>
+</body>
+</html>

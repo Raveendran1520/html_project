@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Bootstrap Home Page</title>
+   
+  
+  <script type="text/javascript">
+
+              function printvalues()
+              {  
+                  var mail=document.form1.mail.value;  
+                  var password=document.form1.password.value;  
+
+                   var checkBox = document.getElementById("myCheck");
+
+                  var status=false;
+
+                   if(mail=="" || mail==null)
+                   {  
+                       document.getElementById("maillocation").innerHTML="Please enter your name";  
+                       status=false;
+                   }
+                   else
+                   {  
+                       document.getElementById("maillocation").innerHTML="OK";  
+                       status=true;
+                    }  
+  
+                   if(password=="" || password==null)
+                   {  
+                       document.getElementById("passwordlocation").innerHTML= " Please enter Password";  
+                       status=false; 
+                   }
+                   else
+                   {  
+                      document.getElementById("passwordlocation").innerHTML="OK"; 
+                      status=true; 
+                   } 
+
+                   if(checkBox.checked==true)
+                   {
+                      status = true;
+                   }
+                   else
+                   {
+                      document.getElementById("rememberMe").innerHTML="XX";
+                      status = false;
+                   }
+
+                  
+                  if(mail!="" && password!="")
+                  {
+                    alert("..LOGIN SUCCESSFULLY.."+"\n THANKS FOR SHOWING INTEREST TO VISIT MY PROFILE...");
+                    return true;
+                  }
+                  
+                   return status;  
+                   
+                }  
+  </script>
+
+
+  <style>
+  
+    body
+    {
+    background-image:url("https://a-static.besthdwallpaper.com/flying-mountain-wallpaper-1440x960-102545_37.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    overflow:hidden;
+    }
+
+    #body
+    {
+    margin:200px 550px;
+    border:1px solid rgba(255,255,255,2);
+    padding:10px;
+    background-color:transparent;
+    overflow:hidden;
+    border-radius:20px;
+    backdrop-filter:blur(50px);
+    }
+
+  #nav
+  {
+    width:320px;
+    margin: 0 auto;
+    list-style: none;
+  }
+  #nav li
+  {
+    float:left;
+    font-size: 25px;
+    font-weight:bold;
+  }
+  #nav a:hover
+  {
+    color:blue;
+  }
+  #nav a
+  {
+        display:block;
+        text-align:center;
+        width:150px;
+        color:orangered;
+  }
+  .logindetails
+  {
+    padding:10px;
+    margin:12px;
+    width:280px;
+    font-weight:bold;
+    color:blanchedalmond;
+  }
+
+  </style>
+</head>
+
+<body>
+
+<form  action="home.html" name="form1"  onsubmit=" return printvalues()">
+
+<center>
+<div id="body">
+
+<ul id="nav">
+
+  <li><a href="D:\JAVA_PRACTICE\Bootstrap_project\login.html" aria-selected="true">Login</a></li>
+  <li><a href="D:\JAVA_PRACTICE\Bootstrap_project\registration.html"aria-selected="false">Register</a></li>
+
+</ul><br>
+
+<center><h1 style="color:whitesmoke;font-weight:bold;">Login</h1></center>
+
+  <div class="container">
+
+  <div class="logindetails">
+    <label>Email address : </label>
+    <input type="email" name="mail" placeholder="Enter email or username"><span id="maillocation" style="color:red;"></span>
+  </div>
+
+  <div class="logindetails">
+  <label>Password : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="password" name="password" placeholder="Enter Password"><span id="passwordlocation" style="color:red;"></span>
+  </div>
+    
+    <div class="change">
+      <input type="checkbox" id="myCheck" value="checked"/><span id="rememberMe" style="color:red;"></span>
+      <label for="myCheck"> Remember me </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <a href="D:\JAVA_PRACTICE\Bootstrap_project\forgotpassword.html">Forgot password?</a>
+    </div><br>
+
+  <div class="login">
+  <button  type="submit" style="background-color:green;color: white;width:90px;">Sign in</button>
+  </div>
+
+  <div class="regbtn">
+    <p>Not a member? <a href="D:\JAVA_PRACTICE\Bootstrap_project\registration.html">Register</a></p>
+  </div>
+</div>
+
+</center>
+</div>
+</form>
+
+</body>
+</html>
